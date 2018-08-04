@@ -1,5 +1,7 @@
 /**
  * Create a hashset using the provided functions
+ * 
+ * This is a work in progress HashTable Example based on an online tutorial
 */
 #include <stdio.h>
 #include <stdlib.h>
