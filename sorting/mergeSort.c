@@ -3,12 +3,9 @@
  * Developed as preparation for a coding interview.
 */
 #include <stdio.h>
+#include "mergeSort.h"
 
 #define IS_DEBUG 1
-
-void printArray(int arr[], int size);
-void merge(int arr[], int left, int middle, int right);
-void mergeSort(int arr[], int left, int right);
 
 int main(){
     int sampleArray[] = {38,27,43,3,9,82,10,1};

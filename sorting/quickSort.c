@@ -5,11 +5,10 @@
  * and https://www.tutorialspoint.com/data_structures_algorithms/quick_sort_program_in_c.htm
  */
 #include <stdio.h>
+#include "quickSort.h"
+
 #define IS_DEBUG 1
 
-void printArray(int arr[], int start, int finish);
-void quickSort(int arr[], int left, int right);
-int partition(int arr[], int left, int right);
 void swap(int* a, int* b);
 
 int main(void){

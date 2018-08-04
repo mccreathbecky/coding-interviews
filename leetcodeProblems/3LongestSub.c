@@ -12,7 +12,7 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
 */
 #include <stdio.h>
 
-#DEFINE MAXSIZE 100
+#define MAXSIZE 100
 
 int lengthOfLongestSubstring(char* s);
 
@@ -35,7 +35,7 @@ int lengthOfLongestSubstring(char* s) {
 	for (int i = 0; s[i] != '\0'; i++){
 		if (maxLength == 0 && (s[i+1] != s[i])) {
 			maxLength++;
-			subString
+			// subString
 		}
 		else if (maxLength > 0) {
 		
