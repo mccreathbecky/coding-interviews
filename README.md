@@ -9,15 +9,14 @@ Working code includes:
 - QuickSort
 - 1TwoSum
 - 2AddTwoNums
+- [Mostly] HashTables
+- myFirstTree
 
 Work In Progress includes:
-- HashTables
 - 3LongestSub
 
 
 The main things I *hope* to add in here are:
-- HashTables
-- Trees???
 - Solutions to common NP complex problems like travelling salesman or knapsack problem
 
 
