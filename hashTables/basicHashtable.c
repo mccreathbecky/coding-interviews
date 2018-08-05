@@ -4,10 +4,10 @@
  * Much credit to: https://medium.com/@bartobri/hash-crash-the-basics-of-hash-tables-bef82a8ea550
  */
 
-#include<stdio.h>
+#include <stdio.h>
+#include "basicHashTable.h"
 
 #define ISDEBUG 1
-#define M 100
 
 typedef struct{
     int key;
@@ -15,17 +15,16 @@ typedef struct{
     struct record_t* nextRecord;
 } record_t;
 
-
 int hashFunction(int key);
-record_t** createHashTable();
 record_t* newRecord(int value);
-void insertRecord(record_t** table, int value);
-void deleteRecord(record_t** table, int value);
-record_t* searchRecord(record_t** table, int searchKey);
-void printRecord(record_t** table, int searchKey);
 void printTableRecord(record_t** table, int index);
-void printTable(record_t** table);
 
+
+/**
+ * Translates any key into an int less than the size of the hashTable
+ * @params {int} key The value to be hashed
+ * @returns {int} A number between 0 and M
+ */
 int hashFunction(int key){
     return key%M;
 }
@@ -257,7 +256,10 @@ void deleteTableRecord(record_t** table, int index){
     free(table[index]);
 }
 
-
+/**
+ * Deletes all records from a table included those in a linkedList
+ * @params {record_t**} table A hashTable to delete
+ */
 void deleteTable(record_t** table){
     for(int i = 0; i<M; i++){
         deleteTableRecord(table,i);
