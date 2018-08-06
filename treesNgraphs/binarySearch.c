@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include "binarySearch.h"
 
 #define ISDEBUG 1
 

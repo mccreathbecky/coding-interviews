@@ -36,3 +36,10 @@ Breadth First Search
 - n, n/2, n/4, ... 1 element
 - how many times can we divide by 2 until we get to 1, O(log2n)
 - can be implemented recursively or iteratively
+
+## Stacks and Queues
+- Linear data structures
+- Flexible Size
+
+Stack: Last In First Out [LIFO]
+Queue: First In First Out [FIFO]
