@@ -1,18 +1,10 @@
 /**
- * Basic stack and queue implementation
+ * Basic stack implementation
 */
 
 #include <stdio.h>
-
-typedef struct{
-    int value;
-    struct node_t* next;
-}node_t;
-
-typedef struct{
-    int size;
-    node_t* topNode;
-}stack_t;
+#include <stdbool.h>
+#include "stack.h"
 
 
 /**
@@ -64,8 +56,31 @@ node_t* pop(stack_t* stack){
         return returnNode;
     } else{
         printf("\nError: Stack is empty. Cannot pop item from stack");
+        return NULL;
     }
 
+}
+
+/**
+ * Returns the top node from a stack
+ * @params  {stack_t*}  stack   The stack to peek at
+ * @return  {node_t*}           The top node from the stack
+*/
+node_t* peek(stack_t* stack){
+    return stack->topNode;
+}
+
+/**
+ * Pops the top node from the stack
+ * @params  {stack_t*}  stack   The stack to pop from
+ * @return  {node_t*}           The top node from the stack
+*/
+bool isEmpty(stack_t* stack){
+    if(stack->size > 0){
+        return false;
+    } else{
+        return true;
+    }
 }
 
 int main(void){
@@ -79,7 +94,8 @@ int main(void){
 
     push(stack,3);
     push(stack,4);
-    push(stack,5);
+    node_t* peekNode = peek(stack);
+    printf("\nPeek node has value: %d", peekNode->value);
 
     poppedNode = pop(stack);
     printf("\nPopped node has value: %d", poppedNode->value);
